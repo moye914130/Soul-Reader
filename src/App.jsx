@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Brain, Sparkles, RefreshCw, ShieldAlert, Quote, ArrowRight, X, Stars, Moon, Eye, RotateCcw, Siren } from 'lucide-react';
+import { Brain, Sparkles, RefreshCw, ShieldAlert, Quote, ArrowRight, X, Stars, Moon, Eye, RotateCcw, Siren, ChevronLeft, ChevronRight } from 'lucide-react';
 
 // --- 擴充至 30 種老闆語錄情境資料庫 ---
 const DATABASE = [
@@ -383,6 +383,18 @@ export default function BossTranslatorApp() {
     setShowCard(false);
   };
 
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+    }
+  };
+
   // 根據等級決定卡片光暈顏色 (更柔和的高級感)
   const getGlowColor = (level) => {
     // 100分危險等級：改為深紅黑色實底 (bg-[#2a0a0a])，移除過多透明度，確保文字清晰
@@ -415,7 +427,7 @@ export default function BossTranslatorApp() {
       <header className="mb-12 text-center max-w-2xl w-full animate-fade-in relative z-10">
         <div className="inline-flex items-center gap-3 mb-6 px-5 py-2 rounded-full bg-slate-900/40 border border-slate-700/50 backdrop-blur-md shadow-lg transition-transform hover:scale-105 duration-500 cursor-default">
           <Stars className="w-3 h-3 text-indigo-300" />
-          <span className="text-[11px] tracking-[0.3em] text-indigo-200 uppercase font-light">Soul Reader 16.0</span>
+          <span className="text-[11px] tracking-[0.3em] text-indigo-200 uppercase font-light">Soul Reader 16.5</span>
           <Moon className="w-3 h-3 text-indigo-300" />
         </div>
         <h1 className="text-4xl md:text-5xl font-serif text-slate-100 mb-5 tracking-wide drop-shadow-2xl">
@@ -467,7 +479,7 @@ export default function BossTranslatorApp() {
                       onClick={analyzeText}
                       disabled={!inputText.trim() || isAnalyzing}
                       // 加大按鈕尺寸與文字大小
-                      className={`group relative w-full md:w-auto px-12 py-5 rounded-full font-serif tracking-[0.2em] text-base md:text-lg transition-all duration-700 overflow-hidden
+                      className={`group relative w-full md:w-auto px-16 py-6 rounded-full font-serif tracking-[0.2em] text-lg md:text-xl font-bold transition-all duration-700 overflow-hidden
                         ${!inputText.trim() || isAnalyzing 
                           ? 'text-slate-600 bg-slate-900 border border-slate-800 cursor-not-allowed' 
                           : 'text-indigo-100 border border-indigo-400/30 hover:border-indigo-300/60 shadow-[0_0_20px_rgba(99,102,241,0.1)] hover:shadow-[0_0_30px_rgba(99,102,241,0.25)] bg-[#1a1f35]'}`}
@@ -592,7 +604,16 @@ export default function BossTranslatorApp() {
                <div className="h-px w-12 bg-gradient-to-l from-transparent to-slate-500"></div>
             </div>
             
-            <div className="relative group">
+            <div className="relative group flex items-center justify-center">
+                {/* Left Navigation Arrow (Desktop Only) */}
+                <button 
+                  onClick={scrollLeft}
+                  className="hidden md:flex absolute left-0 z-30 p-3 rounded-full bg-[#0a0e17]/80 border border-slate-700 text-indigo-300 hover:text-white hover:bg-indigo-600/50 hover:border-indigo-400 transition-all duration-300 -translate-x-12"
+                  aria-label="Scroll left"
+                >
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+
                 {/* Horizontal Scroll Grid Container */}
                 <div 
                     ref={scrollContainerRef}
@@ -604,7 +625,8 @@ export default function BossTranslatorApp() {
                             key={idx}
                             onClick={() => setInputText(text)}
                             // 調整文字大小：手機版 text-sm，電腦版 text-lg
-                            className="w-[350px] snap-center p-6 bg-[#0a0e17]/60 hover:bg-[#131929] border border-slate-800/60 hover:border-indigo-500/30 text-slate-400 hover:text-indigo-200 text-sm md:text-lg text-left rounded-xl transition-all duration-300 font-medium tracking-wider shadow-sm hover:shadow-[0_0_15px_rgba(99,102,241,0.08)] backdrop-blur-sm flex items-center justify-between group/card"
+                            // 調整寬度：手機版 w-[260px]，電腦版 w-[350px]
+                            className="w-[260px] md:w-[350px] snap-center p-6 bg-[#0a0e17]/60 hover:bg-[#131929] border border-slate-800/60 hover:border-indigo-500/30 text-slate-400 hover:text-indigo-200 text-sm md:text-lg text-left rounded-xl transition-all duration-300 font-medium tracking-wider shadow-sm hover:shadow-[0_0_15px_rgba(99,102,241,0.08)] backdrop-blur-sm flex items-center justify-between group/card"
                         >
                             <span className="leading-relaxed opacity-80 group-hover/card:opacity-100 transition-opacity truncate pr-2">
                                 "{text}"
@@ -613,19 +635,28 @@ export default function BossTranslatorApp() {
                         </button>
                     ))}
                 </div>
+
+                {/* Right Navigation Arrow (Desktop Only) */}
+                <button 
+                  onClick={scrollRight}
+                  className="hidden md:flex absolute right-0 z-30 p-3 rounded-full bg-[#0a0e17]/80 border border-slate-700 text-indigo-300 hover:text-white hover:bg-indigo-600/50 hover:border-indigo-400 transition-all duration-300 translate-x-12"
+                  aria-label="Scroll right"
+                >
+                  <ChevronRight className="w-6 h-6" />
+                </button>
                 
                 {/* Scroll Hints (Optional Visual Cues) */}
-                <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-[#050810] to-transparent pointer-events-none"></div>
-                <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-[#050810] to-transparent pointer-events-none"></div>
+                <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-[#050810] to-transparent pointer-events-none md:hidden"></div>
+                <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-[#050810] to-transparent pointer-events-none md:hidden"></div>
             </div>
             
-            <p className="text-center text-sm md:text-base text-slate-500 mt-4 tracking-widest opacity-80">← 左右滑動查看更多 →</p>
+            <p className="text-center text-xs text-slate-500 mt-3 tracking-widest opacity-60 md:hidden">← 左右滑動查看更多 →</p>
         </div>
       )}
 
-      <footer className="mt-auto pt-8 pb-8 text-slate-500 text-sm md:text-base text-center font-light tracking-[0.1em] uppercase opacity-90 relative z-10 hover:opacity-100 transition-opacity duration-500 flex flex-col gap-3">
-          <p className="tracking-[0.4em] text-xs md:text-sm">Insight & Truth • Ver 16.0</p>
-          <p className="text-lg md:text-xl font-medium">
+      <footer className="mt-auto pt-8 pb-8 text-slate-500 text-[10px] md:text-sm text-center font-light tracking-[0.1em] uppercase opacity-90 relative z-10 hover:opacity-100 transition-opacity duration-500 flex flex-col gap-3">
+          <p className="tracking-[0.4em]">Insight & Truth • Ver 16.5</p>
+          <p className="text-sm md:text-xl font-medium">
               製作者：
               <a 
                   href="https://chia-tinyhand.com/" 
