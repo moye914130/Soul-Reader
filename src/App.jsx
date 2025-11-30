@@ -205,7 +205,7 @@ const DATABASE = [
   // 23. 職場性騷擾 (Workplace Harassment)
   {
     category: "職場性騷擾",
-    keywords: ['勾引誰', '身材', '有料', '包太緊', '陪睡', '雙人房', '大驚小怪', '追你', '滋潤', '談戀愛'],
+    keywords: ['勾引誰', '身材', '有料', '包太緊', '陪睡', '雙人房', '大驚小怪', '追你', '滋潤', '談戀愛', '約會', '炒飯', '想揉', '自拍', '穿露一點'],
     translation: "這不是開玩笑，這是性騷擾。我試圖用權力不對等來合理化對你身體或隱私的侵犯，並測試你的底線。",
     puaLevel: 100,
     advice: "這是違法行為！請立刻蒐證（錄音、截圖），不要隱忍，尋求法律或人資協助。",
@@ -244,8 +244,8 @@ const DATABASE = [
   // 27. 自戀性騷 (New - High Risk)
   {
     category: "自戀性騷",
-    keywords: ['厲害', '比較看看', '練過', '撐很久', '軟腳蝦', '比較', '男朋友'],
-    translation: "我極度自戀，把性騷擾當成展現雄風的方式。在職場講這種話，是敵意環境性騷擾，目的是滿足我的虛榮心。",
+    keywords: ['厲害', '比較看看', '練過', '撐很久', '軟腳蝦', '比較', '男朋友', '年輕個十歲'],
+    translation: "我極度自戀，把性騷擾當成展現雄風的方式，甚至把『追求你』當成對你的恩賜。這其實是在試探你的底線，看你可以忍受多少冒犯。",
     puaLevel: 95,
     advice: "不需要回應他的問題，保持冷漠。紀錄發生的時間地點與對話內容，這屬於言語性騷擾，可向主管機關申訴。",
     verdict: "PUA 指數：95% (蒐證申訴)"
@@ -253,7 +253,7 @@ const DATABASE = [
   // 28. 物品化羞辱 (New - High Risk)
   {
     category: "物品化羞辱",
-    keywords: ['真實的一面', '拉鍊', '卡住', '蹭一下', '伺候', '福利', '形狀', '硬的地方', '握不住', '車內', '兩個人'],
+    keywords: ['真實的一面', '拉鍊', '卡住', '蹭一下', '伺候', '福利', '形狀', '硬的地方', '握不住', '車內', '兩個人', '請你穿露一點', '留念'],
     translation: "我把你當成洩慾或觀賞的『物品』，而非員工。這種赤裸的言語暴力通常是肢體侵犯的前奏，我在測試你的反抗程度。",
     puaLevel: 100,
     advice: "🔴 紅色警報！若在車內或辦公室獨處，請保持冷靜不要激怒對方，設法聯繫親友或製造聲響，一有機會立刻逃離。",
@@ -262,7 +262,7 @@ const DATABASE = [
   // 29. 生理勒索/倒果為因 (New - High Risk)
   {
     category: "生理勒索",
-    keywords: ['穿這麼緊', '害我', '腫得好痛', '站起來', '負責', '下面', '控制不住'],
+    keywords: ['穿這麼緊', '害我', '腫得好痛', '站起來', '負責', '下面', '控制不住', '很難專心', '穿這麼露'],
     translation: "我把我的生理反應怪罪到你身上，這是典型的強暴犯邏輯。試圖讓你產生愧疚感或責任感，讓你覺得『是我的錯』。",
     puaLevel: 98,
     advice: "不要被洗腦！他的生理反應是他自己的問題，與你的穿著完全無關。嚴正拒絕並告知這讓你不舒服。",
@@ -271,7 +271,7 @@ const DATABASE = [
   // 30. 肢體威脅 (New - High Risk)
   {
     category: "肢體威脅",
-    keywords: ['摸一下', '透透氣', '不放進去', '硬度', '不幫我', '褲襠', '雄風', '騙妳', '拉開'],
+    keywords: ['摸一下', '透透氣', '不放進去', '硬度', '不幫我', '褲襠', '雄風', '騙妳', '拉開', '進去一下', '不會射', '射'],
     translation: "這已經超越騷擾，是強制猥褻或性侵害的預告。我用威脅或利誘的方式，強迫你進行肢體接觸。",
     puaLevel: 100,
     advice: "🔴 這是犯罪行為！不要猶豫，立刻離開！如果被阻攔，請大聲呼救、破壞物品製造聲響，事後務必報警提告，絕不和解。",
@@ -288,7 +288,7 @@ const CLASSIC_QUOTES = [
   "如果我年輕個十歲，我一定會追妳",
   "除了我，妳覺得外面還有誰敢用妳？",
   "妳穿這麼緊，害我下面現在腫得好痛",
-  "妳這種抗壓性，去哪裡都做不久啦",
+  "我就進去一下，不會射的",
   "這裡只有我們兩個人，不想看老闆真實的一面嗎？",
   "不要跟我談勞基法，我們談的是夢想",
   "反正只是蹭一下，又不進去，妳怕什麼？",
@@ -301,7 +301,7 @@ const CLASSIC_QUOTES = [
   "我是把妳當女兒看，才會這樣跟妳說話",
   "妳要敢說出去，看業界誰還會相信妳",
   "未來的特助位置我一直幫妳留著",
-  "這行圈子很小，妳最好想清楚",
+  "今天穿這麼漂亮，晚上要不要跟我約會啊",
   "當初給你機會錄用你，你要心存感激",
   "我對你這麼好，你怎麼可以離開",
   "大家共體時艱，今年沒有年終",
@@ -309,6 +309,7 @@ const CLASSIC_QUOTES = [
   "年輕人眼光要放遠，不要計較錢",
   "能者多勞，多做一點是給你機會",
   "我不是在罵你，我是對事不對人",
+  "自拍一張給我留念啊",
   "把公司當成自己的家",
   "這只是西方禮儀的擁抱，妳想太多了",
   "妳現在幫我省下的錢，以後還不是大家分",
@@ -384,7 +385,8 @@ export default function BossTranslatorApp() {
 
   // 根據等級決定卡片光暈顏色 (更柔和的高級感)
   const getGlowColor = (level) => {
-    if (level === 100) return "shadow-[0_0_60px_rgba(220,38,38,0.4)] border-red-600 bg-gradient-to-br from-[#2a0a0a] to-[#050810] animate-pulse-slow"; // 危險警報
+    // 100分危險等級：改為深紅黑色實底 (bg-[#2a0a0a])，移除過多透明度，確保文字清晰
+    if (level === 100) return "shadow-[0_0_60px_rgba(220,38,38,0.4)] border-red-600 bg-[#2a0a0a] animate-pulse-slow"; 
     if (level < 60) return "shadow-[0_0_50px_rgba(16,185,129,0.2)] border-emerald-500/40 bg-gradient-to-br from-[#0a1f18] to-[#050810]";
     if (level < 85) return "shadow-[0_0_50px_rgba(245,158,11,0.2)] border-amber-500/40 bg-gradient-to-br from-[#1f160a] to-[#050810]";
     return "shadow-[0_0_60px_rgba(225,29,72,0.25)] border-rose-500/40 bg-gradient-to-br from-[#1f0a0f] to-[#050810]";
@@ -413,7 +415,7 @@ export default function BossTranslatorApp() {
       <header className="mb-12 text-center max-w-2xl w-full animate-fade-in relative z-10">
         <div className="inline-flex items-center gap-3 mb-6 px-5 py-2 rounded-full bg-slate-900/40 border border-slate-700/50 backdrop-blur-md shadow-lg transition-transform hover:scale-105 duration-500 cursor-default">
           <Stars className="w-3 h-3 text-indigo-300" />
-          <span className="text-[11px] tracking-[0.3em] text-indigo-200 uppercase font-light">Soul Reader 13.0</span>
+          <span className="text-[11px] tracking-[0.3em] text-indigo-200 uppercase font-light">Soul Reader 16.0</span>
           <Moon className="w-3 h-3 text-indigo-300" />
         </div>
         <h1 className="text-4xl md:text-5xl font-serif text-slate-100 mb-5 tracking-wide drop-shadow-2xl">
@@ -441,8 +443,8 @@ export default function BossTranslatorApp() {
                 
                 <div className="p-8 relative">
                   <div className="flex justify-between items-center mb-6">
-                     <span className="text-lg text-indigo-300/60 tracking-[0.2em] uppercase font-serif flex items-center gap-2"> {/* 字體加大至 text-lg */}
-                        <Sparkles className="w-5 h-5" /> 老闆說的 murmur..
+                     <span className="text-xl md:text-2xl text-indigo-300/80 tracking-[0.2em] uppercase font-serif flex items-center gap-2 font-bold"> 
+                        <Sparkles className="w-6 h-6" /> 老闆說的 murmur..
                      </span>
                      {inputText && <button onClick={clearInput} className="p-1 rounded-full hover:bg-white/10 transition"><X className="w-4 h-4 text-slate-500 hover:text-slate-300"/></button>}
                   </div>
@@ -464,15 +466,16 @@ export default function BossTranslatorApp() {
                      <button
                       onClick={analyzeText}
                       disabled={!inputText.trim() || isAnalyzing}
-                      className={`group relative px-10 py-3 rounded-full font-serif tracking-[0.15em] text-xs transition-all duration-700 overflow-hidden
+                      // 加大按鈕尺寸與文字大小
+                      className={`group relative w-full md:w-auto px-12 py-5 rounded-full font-serif tracking-[0.2em] text-base md:text-lg transition-all duration-700 overflow-hidden
                         ${!inputText.trim() || isAnalyzing 
                           ? 'text-slate-600 bg-slate-900 border border-slate-800 cursor-not-allowed' 
                           : 'text-indigo-100 border border-indigo-400/30 hover:border-indigo-300/60 shadow-[0_0_20px_rgba(99,102,241,0.1)] hover:shadow-[0_0_30px_rgba(99,102,241,0.25)] bg-[#1a1f35]'}`}
                     >
                       <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-indigo-500/20 to-transparent -translate-x-full group-hover:animate-shimmer"></div>
-                      <span className="relative flex items-center gap-3">
-                         {isAnalyzing ? <RefreshCw className="w-4 h-4 animate-spin text-indigo-400" /> : <Eye className="w-4 h-4 text-indigo-300" />}
-                         {isAnalyzing ? "星象解讀中..." : "揭示真相"}
+                      <span className="relative flex items-center justify-center gap-3">
+                         {isAnalyzing ? <RefreshCw className="w-5 h-5 animate-spin text-indigo-400" /> : <Eye className="w-5 h-5 text-indigo-300" />}
+                         {isAnalyzing ? "星象解讀中..." : "揭示真相 REVEAL"}
                       </span>
                     </button>
                   </div>
@@ -525,30 +528,31 @@ export default function BossTranslatorApp() {
 
                 {/* The Truth - Enhanced Texture */}
                 <div className="mb-10 text-center relative z-10">
-                   <div className={`relative backdrop-blur-md p-6 rounded-lg border shadow-[inset_0_0_20px_rgba(0,0,0,0.5)] group ${result.puaLevel === 100 ? 'bg-red-950/20 border-red-500/20' : 'bg-[#1a1f30]/40 border-white/5'}`}>
+                   {/* 100分危險等級：增加背景不透明度 (bg-red-950/90)，確保文字可讀 */}
+                   <div className={`relative backdrop-blur-md p-6 rounded-lg border shadow-[inset_0_0_20px_rgba(0,0,0,0.5)] group ${result.puaLevel === 100 ? 'bg-red-950/90 border-red-500/30' : 'bg-[#1a1f30]/40 border-white/5'}`}>
                         {/* Decorative corners */}
                         <div className={`absolute top-0 left-0 w-2 h-2 border-t border-l ${result.puaLevel === 100 ? 'border-red-500/50' : 'border-indigo-400/30'}`}></div>
                         <div className={`absolute top-0 right-0 w-2 h-2 border-t border-r ${result.puaLevel === 100 ? 'border-red-500/50' : 'border-indigo-400/30'}`}></div>
                         <div className={`absolute bottom-0 left-0 w-2 h-2 border-b border-l ${result.puaLevel === 100 ? 'border-red-500/50' : 'border-indigo-400/30'}`}></div>
                         <div className={`absolute bottom-0 right-0 w-2 h-2 border-b border-r ${result.puaLevel === 100 ? 'border-red-500/50' : 'border-indigo-400/30'}`}></div>
 
-                        <Quote className={`w-4 h-4 absolute top-3 left-3 transform -scale-x-100 ${result.puaLevel === 100 ? 'text-red-500/50' : 'text-indigo-400/50'}`} />
-                        <p className="text-lg md:text-xl leading-8 font-serif text-slate-200 drop-shadow-md tracking-wide italic">
+                        <Quote className={`w-4 h-4 absolute top-3 left-3 transform -scale-x-100 ${result.puaLevel === 100 ? 'text-red-200' : 'text-indigo-400/50'}`} />
+                        <p className={`text-lg md:text-xl leading-8 font-serif drop-shadow-md tracking-wide italic ${result.puaLevel === 100 ? 'text-white font-medium' : 'text-slate-200'}`}>
                             {result.translation}
                         </p>
-                        <Quote className={`w-4 h-4 absolute bottom-3 right-3 ${result.puaLevel === 100 ? 'text-red-500/50' : 'text-indigo-400/50'}`} />
+                        <Quote className={`w-4 h-4 absolute bottom-3 right-3 ${result.puaLevel === 100 ? 'text-red-200' : 'text-indigo-400/50'}`} />
                    </div>
                 </div>
 
                 {/* Advice Section */}
                 <div className="space-y-6 mb-8">
-                   <div className={`p-5 rounded-xl border shadow-inner backdrop-blur-sm relative overflow-hidden group ${result.puaLevel === 100 ? 'bg-red-900/10 border-red-500/20' : 'bg-[#151a2a]/60 border-white/5'}`}>
+                   <div className={`p-5 rounded-xl border shadow-inner backdrop-blur-sm relative overflow-hidden group ${result.puaLevel === 100 ? 'bg-red-900/40 border-red-500/40' : 'bg-[#151a2a]/60 border-white/5'}`}>
                       <div className={`absolute top-0 left-0 w-1 h-full transition-colors ${result.puaLevel === 100 ? 'bg-red-500' : 'bg-indigo-500/30 group-hover:bg-indigo-500/50'}`}></div>
-                      <h4 className={`font-serif mb-2 text-sm tracking-[0.2em] uppercase flex items-center gap-2 ${result.puaLevel === 100 ? 'text-red-400' : 'text-indigo-300/90'}`}> {/* 字體加大至 text-sm */}
-                        {result.puaLevel === 100 ? <Siren className="w-4 h-4 animate-pulse" /> : <ShieldAlert className="w-4 h-4" />}
+                      <h4 className={`font-serif mb-2 text-lg tracking-[0.2em] uppercase flex items-center gap-2 font-bold ${result.puaLevel === 100 ? 'text-red-300' : 'text-indigo-300/90'}`}> 
+                        {result.puaLevel === 100 ? <Siren className="w-5 h-5 animate-pulse" /> : <ShieldAlert className="w-5 h-5" />}
                         教戰手則
                       </h4>
-                      <p className="text-slate-400 text-base md:text-lg leading-7 font-light tracking-wide"> {/* 字體加大至 text-base md:text-lg */}
+                      <p className={`text-lg md:text-xl leading-8 font-light tracking-wide ${result.puaLevel === 100 ? 'text-white' : 'text-slate-400'}`}>
                         {result.advice}
                       </p>
                    </div>
@@ -562,13 +566,13 @@ export default function BossTranslatorApp() {
                 </div>
 
                 {/* Return Button (Moved to Bottom) - Enlarged */}
-                <div className="mt-auto flex justify-center pt-4">
+                <div className="mt-auto flex justify-center pt-6">
                    <button 
                      onClick={() => setShowCard(false)} 
-                     className="group flex items-center gap-3 px-10 py-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/5 hover:border-white/10 transition-all duration-300" // 加大 Padding px-10 py-3
+                     className="group flex items-center gap-3 px-12 py-5 rounded-full bg-white/5 hover:bg-white/10 border border-white/5 hover:border-white/10 transition-all duration-300"
                    >
-                     <RotateCcw className="w-4 h-4 text-indigo-300 group-hover:-rotate-180 transition-transform duration-700" />
-                     <span className="text-sm tracking-[0.2em] text-indigo-200 uppercase font-light">返回</span> {/* 字體加大至 text-sm */}
+                     <RotateCcw className="w-5 h-5 text-indigo-300 group-hover:-rotate-180 transition-transform duration-700" />
+                     <span className="text-lg tracking-[0.3em] text-indigo-200 uppercase font-light">返回</span>
                    </button>
                 </div>
 
@@ -584,7 +588,7 @@ export default function BossTranslatorApp() {
         <div className="w-full max-w-4xl animate-fade-in delay-200 mb-12 relative z-20">
             <div className="flex items-center gap-4 px-8 opacity-30 mb-6 justify-center">
                <div className="h-px w-12 bg-gradient-to-r from-transparent to-slate-500"></div>
-               <span className="text-lg text-slate-400 uppercase tracking-[0.3em] font-serif whitespace-nowrap">經典老闆台詞</span> {/* 字體加大至 text-lg */}
+               <span className="text-xl md:text-2xl text-slate-300 uppercase tracking-[0.3em] font-serif whitespace-nowrap font-bold">經典老闆台詞</span>
                <div className="h-px w-12 bg-gradient-to-l from-transparent to-slate-500"></div>
             </div>
             
@@ -592,19 +596,20 @@ export default function BossTranslatorApp() {
                 {/* Horizontal Scroll Grid Container */}
                 <div 
                     ref={scrollContainerRef}
-                    className="grid grid-rows-2 grid-flow-col gap-3 px-8 pb-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide mask-linear"
+                    className="grid grid-rows-2 grid-flow-col gap-4 px-8 pb-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide mask-linear"
                     style={{ scrollBehavior: 'smooth' }}
                 >
                     {CLASSIC_QUOTES.map((text, idx) => (
                         <button 
                             key={idx}
                             onClick={() => setInputText(text)}
-                            className="w-[320px] snap-center p-5 bg-[#0a0e17]/60 hover:bg-[#131929] border border-slate-800/60 hover:border-indigo-500/30 text-slate-500 hover:text-indigo-200 text-base text-left rounded-xl transition-all duration-300 font-light tracking-wider shadow-sm hover:shadow-[0_0_15px_rgba(99,102,241,0.08)] backdrop-blur-sm flex items-center justify-between group/card" // 寬度加大至 320px, 字體加大至 text-base
+                            // 調整文字大小：手機版 text-sm，電腦版 text-lg
+                            className="w-[350px] snap-center p-6 bg-[#0a0e17]/60 hover:bg-[#131929] border border-slate-800/60 hover:border-indigo-500/30 text-slate-400 hover:text-indigo-200 text-sm md:text-lg text-left rounded-xl transition-all duration-300 font-medium tracking-wider shadow-sm hover:shadow-[0_0_15px_rgba(99,102,241,0.08)] backdrop-blur-sm flex items-center justify-between group/card"
                         >
                             <span className="leading-relaxed opacity-80 group-hover/card:opacity-100 transition-opacity truncate pr-2">
                                 "{text}"
                             </span>
-                            <ArrowRight className="w-4 h-4 flex-shrink-0 text-indigo-400 opacity-0 group-hover/card:opacity-100 transition-opacity transform -translate-x-2 group-hover/card:translate-x-0 duration-300"/>
+                            <ArrowRight className="w-5 h-5 flex-shrink-0 text-indigo-400 opacity-0 group-hover/card:opacity-100 transition-opacity transform -translate-x-2 group-hover/card:translate-x-0 duration-300"/>
                         </button>
                     ))}
                 </div>
@@ -614,19 +619,19 @@ export default function BossTranslatorApp() {
                 <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-[#050810] to-transparent pointer-events-none"></div>
             </div>
             
-            <p className="text-center text-[9px] text-slate-600 mt-2 tracking-widest opacity-40">← 左右滑動查看更多 →</p>
+            <p className="text-center text-sm md:text-base text-slate-500 mt-4 tracking-widest opacity-80">← 左右滑動查看更多 →</p>
         </div>
       )}
 
-      <footer className="mt-auto pt-6 pb-6 text-slate-700 text-[10px] text-center font-light tracking-[0.1em] uppercase opacity-60 relative z-10 hover:opacity-100 transition-opacity duration-500 flex flex-col gap-2">
-          <p className="tracking-[0.4em]">Insight & Truth • Ver 13.0</p>
-          <p>
+      <footer className="mt-auto pt-8 pb-8 text-slate-500 text-sm md:text-base text-center font-light tracking-[0.1em] uppercase opacity-90 relative z-10 hover:opacity-100 transition-opacity duration-500 flex flex-col gap-3">
+          <p className="tracking-[0.4em] text-xs md:text-sm">Insight & Truth • Ver 16.0</p>
+          <p className="text-lg md:text-xl font-medium">
               製作者：
               <a 
                   href="https://chia-tinyhand.com/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-indigo-400/80 hover:text-indigo-300 underline underline-offset-4 decoration-indigo-500/30 hover:decoration-indigo-300 transition-all ml-1"
+                  className="text-indigo-400 hover:text-indigo-300 underline underline-offset-4 decoration-indigo-500/30 hover:decoration-indigo-300 transition-all ml-1"
               >
                   小手佳佳 ＠Chia_tinyhand
               </a>
