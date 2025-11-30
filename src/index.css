@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 自定義捲軸樣式 (Optional) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0e17; 
+}
+::-webkit-scrollbar-thumb {
+  background: #2d3748; 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4a5568; 
+}
+
+/* 確保 mask-linear 效果能運作 */
+.mask-linear {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
