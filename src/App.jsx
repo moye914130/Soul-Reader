@@ -413,7 +413,7 @@ export default function BossTranslatorApp() {
       <header className="mb-12 text-center max-w-2xl w-full animate-fade-in relative z-10">
         <div className="inline-flex items-center gap-3 mb-6 px-5 py-2 rounded-full bg-slate-900/40 border border-slate-700/50 backdrop-blur-md shadow-lg transition-transform hover:scale-105 duration-500 cursor-default">
           <Stars className="w-3 h-3 text-indigo-300" />
-          <span className="text-[11px] tracking-[0.3em] text-indigo-200 uppercase font-light">Soul Reader 11.0</span>
+          <span className="text-[11px] tracking-[0.3em] text-indigo-200 uppercase font-light">Soul Reader 13.0</span>
           <Moon className="w-3 h-3 text-indigo-300" />
         </div>
         <h1 className="text-4xl md:text-5xl font-serif text-slate-100 mb-5 tracking-wide drop-shadow-2xl">
@@ -441,8 +441,8 @@ export default function BossTranslatorApp() {
                 
                 <div className="p-8 relative">
                   <div className="flex justify-between items-center mb-6">
-                     <span className="text-[10px] text-indigo-300/60 tracking-[0.2em] uppercase font-serif flex items-center gap-2">
-                        <Sparkles className="w-3 h-3" /> 老闆說的 murmur..
+                     <span className="text-lg text-indigo-300/60 tracking-[0.2em] uppercase font-serif flex items-center gap-2"> {/* 字體加大至 text-lg */}
+                        <Sparkles className="w-5 h-5" /> 老闆說的 murmur..
                      </span>
                      {inputText && <button onClick={clearInput} className="p-1 rounded-full hover:bg-white/10 transition"><X className="w-4 h-4 text-slate-500 hover:text-slate-300"/></button>}
                   </div>
@@ -544,16 +544,16 @@ export default function BossTranslatorApp() {
                 <div className="space-y-6 mb-8">
                    <div className={`p-5 rounded-xl border shadow-inner backdrop-blur-sm relative overflow-hidden group ${result.puaLevel === 100 ? 'bg-red-900/10 border-red-500/20' : 'bg-[#151a2a]/60 border-white/5'}`}>
                       <div className={`absolute top-0 left-0 w-1 h-full transition-colors ${result.puaLevel === 100 ? 'bg-red-500' : 'bg-indigo-500/30 group-hover:bg-indigo-500/50'}`}></div>
-                      <h4 className={`font-serif mb-2 text-[10px] tracking-[0.2em] uppercase flex items-center gap-2 ${result.puaLevel === 100 ? 'text-red-400' : 'text-indigo-300/90'}`}>
-                        {result.puaLevel === 100 ? <Siren className="w-3 h-3 animate-pulse" /> : <ShieldAlert className="w-3 h-3" />}
+                      <h4 className={`font-serif mb-2 text-sm tracking-[0.2em] uppercase flex items-center gap-2 ${result.puaLevel === 100 ? 'text-red-400' : 'text-indigo-300/90'}`}> {/* 字體加大至 text-sm */}
+                        {result.puaLevel === 100 ? <Siren className="w-4 h-4 animate-pulse" /> : <ShieldAlert className="w-4 h-4" />}
                         教戰手則
                       </h4>
-                      <p className="text-slate-400 text-xs md:text-sm leading-6 font-light tracking-wide">
+                      <p className="text-slate-400 text-base md:text-lg leading-7 font-light tracking-wide"> {/* 字體加大至 text-base md:text-lg */}
                         {result.advice}
                       </p>
                    </div>
                    
-                   {/* Verdict - 已放大並強化鼓勵效果 */}
+                   {/* Verdict */}
                    <div className="text-center mt-6">
                       <span className={`text-sm md:text-base font-bold tracking-widest border-b pb-2 shadow-sm drop-shadow-md ${result.puaLevel === 100 ? 'text-red-400 border-red-500/30' : 'text-indigo-200 border-indigo-500/30'}`} title="判決結果">
                          {result.verdict}
@@ -561,14 +561,14 @@ export default function BossTranslatorApp() {
                    </div>
                 </div>
 
-                {/* Return Button (Moved to Bottom) */}
-                <div className="mt-auto flex justify-center pt-2">
+                {/* Return Button (Moved to Bottom) - Enlarged */}
+                <div className="mt-auto flex justify-center pt-4">
                    <button 
                      onClick={() => setShowCard(false)} 
-                     className="group flex items-center gap-2 px-6 py-2 rounded-full bg-white/5 hover:bg-white/10 border border-white/5 hover:border-white/10 transition-all duration-300"
+                     className="group flex items-center gap-3 px-10 py-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/5 hover:border-white/10 transition-all duration-300" // 加大 Padding px-10 py-3
                    >
-                     <RotateCcw className="w-3 h-3 text-indigo-300 group-hover:-rotate-180 transition-transform duration-700" />
-                     <span className="text-[10px] tracking-[0.2em] text-indigo-200 uppercase font-light">返回</span>
+                     <RotateCcw className="w-4 h-4 text-indigo-300 group-hover:-rotate-180 transition-transform duration-700" />
+                     <span className="text-sm tracking-[0.2em] text-indigo-200 uppercase font-light">返回</span> {/* 字體加大至 text-sm */}
                    </button>
                 </div>
 
@@ -584,7 +584,7 @@ export default function BossTranslatorApp() {
         <div className="w-full max-w-4xl animate-fade-in delay-200 mb-12 relative z-20">
             <div className="flex items-center gap-4 px-8 opacity-30 mb-6 justify-center">
                <div className="h-px w-12 bg-gradient-to-r from-transparent to-slate-500"></div>
-               <span className="text-[10px] text-slate-400 uppercase tracking-[0.3em] font-serif whitespace-nowrap">經典老闆台詞</span>
+               <span className="text-lg text-slate-400 uppercase tracking-[0.3em] font-serif whitespace-nowrap">經典老闆台詞</span> {/* 字體加大至 text-lg */}
                <div className="h-px w-12 bg-gradient-to-l from-transparent to-slate-500"></div>
             </div>
             
@@ -599,12 +599,12 @@ export default function BossTranslatorApp() {
                         <button 
                             key={idx}
                             onClick={() => setInputText(text)}
-                            className="w-[280px] snap-center p-4 bg-[#0a0e17]/60 hover:bg-[#131929] border border-slate-800/60 hover:border-indigo-500/30 text-slate-500 hover:text-indigo-200 text-xs text-left rounded-xl transition-all duration-300 font-light tracking-wider shadow-sm hover:shadow-[0_0_15px_rgba(99,102,241,0.08)] backdrop-blur-sm flex items-center justify-between group/card"
+                            className="w-[320px] snap-center p-5 bg-[#0a0e17]/60 hover:bg-[#131929] border border-slate-800/60 hover:border-indigo-500/30 text-slate-500 hover:text-indigo-200 text-base text-left rounded-xl transition-all duration-300 font-light tracking-wider shadow-sm hover:shadow-[0_0_15px_rgba(99,102,241,0.08)] backdrop-blur-sm flex items-center justify-between group/card" // 寬度加大至 320px, 字體加大至 text-base
                         >
                             <span className="leading-relaxed opacity-80 group-hover/card:opacity-100 transition-opacity truncate pr-2">
                                 "{text}"
                             </span>
-                            <ArrowRight className="w-3 h-3 flex-shrink-0 text-indigo-400 opacity-0 group-hover/card:opacity-100 transition-opacity transform -translate-x-2 group-hover/card:translate-x-0 duration-300"/>
+                            <ArrowRight className="w-4 h-4 flex-shrink-0 text-indigo-400 opacity-0 group-hover/card:opacity-100 transition-opacity transform -translate-x-2 group-hover/card:translate-x-0 duration-300"/>
                         </button>
                     ))}
                 </div>
@@ -619,7 +619,7 @@ export default function BossTranslatorApp() {
       )}
 
       <footer className="mt-auto pt-6 pb-6 text-slate-700 text-[10px] text-center font-light tracking-[0.1em] uppercase opacity-60 relative z-10 hover:opacity-100 transition-opacity duration-500 flex flex-col gap-2">
-          <p className="tracking-[0.4em]">Insight & Truth • Ver 11.0</p>
+          <p className="tracking-[0.4em]">Insight & Truth • Ver 13.0</p>
           <p>
               製作者：
               <a 
